@@ -1,0 +1,14 @@
+body {
+  /* breackpoints */
+  --xs: 320px;
+  --s: 480px;
+  --m: 768px;
+  --l: 1280px;
+
+  /* colors */
+  --main-color: #222222;
+  --extra-text-color: #565148;
+  --accent-color: #ed4b5e;
+  --extra-accent-color: #ffeff0;
+  --bg-color: #fff;
+}
