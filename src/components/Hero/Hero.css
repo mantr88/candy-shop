@@ -1,0 +1,23 @@
+.hero-section {
+  text-align: center;
+}
+
+.hero-title {
+  /* position: absolute;
+  top: 0%;
+  left: 00%;
+  transform: translate(50%, 50%); */
+  padding-top: 212px;
+  padding-bottom: 212px;
+
+  font-family: "Anzeigen Grotesk T";
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 42px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.hero-accent-text {
+  color: var(--main-color);
+}
