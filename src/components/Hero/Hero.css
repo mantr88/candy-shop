@@ -2,11 +2,14 @@
   text-align: center;
 }
 
+.hero-top-img {
+  position: absolute;
+  top: 70px;
+  right: 203px;
+  z-index: -1;
+}
+
 .hero-title {
-  /* position: absolute;
-  top: 0%;
-  left: 00%;
-  transform: translate(50%, 50%); */
   padding-top: 212px;
   padding-bottom: 212px;
 
@@ -20,4 +23,11 @@
 
 .hero-accent-text {
   color: var(--main-color);
+}
+
+.hero-bottom-img {
+  position: absolute;
+  top: 360px;
+  left: 210px;
+  z-index: -1;
 }
