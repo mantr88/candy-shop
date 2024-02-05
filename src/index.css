@@ -99,17 +99,8 @@ li {
   text-decoration: none;
 }
 
-.list {
-  list-style: none;
-}
-
-.link {
-  text-decoration: none;
-  color: inherit;
-}
-
 a {
-  color: var(--accent-color);
+  color: inherit;
   text-decoration: none;
   font-style: normal;
   cursor: pointer;
