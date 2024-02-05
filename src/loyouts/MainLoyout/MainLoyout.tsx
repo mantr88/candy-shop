@@ -7,8 +7,8 @@ interface LoyoutProps {
 
 function MainLoyout({ children }: LoyoutProps) {
   return (
-    <div className="container">
-      <div className="overlay">
+    <div className="overlay">
+      <div className="container">
         <Header />
         <main>{children}</main>
       </div>
