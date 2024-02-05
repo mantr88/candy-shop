@@ -2,16 +2,15 @@ import Header from "../Header/Header";
 import "./MainLoyout.css";
 
 interface LoyoutProps {
-  children: JSX.Element;
+  children: JSX.Element[];
 }
 
 function MainLoyout({ children }: LoyoutProps) {
   return (
-    <div className="overlay">
-      <div className="container">
-        <Header />
-        <main>{children}</main>
-      </div>
+    <div className="container ">
+      <div className="overlay"></div>
+      <Header />
+      <main>{children}</main>
     </div>
   );
 }

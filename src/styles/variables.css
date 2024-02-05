@@ -8,7 +8,11 @@
   /* colors */
   --main-color: #222222;
   --extra-text-color: #565148;
+  --white-text-color: #fff;
   --accent-color: #ed4b5e;
   --extra-accent-color: #ffeff0;
   --bg-color: #fff;
+  --bg-grey-color: #444444;
+  --bg-light-grey-color: #808080;
+  --dot-accent-color: #000;
 }
