@@ -1,0 +1,65 @@
+[class^="review-number-slide"],
+[class*=" review-number-slide"] {
+  max-height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  color: var(--main-color);
+  height: 229px;
+  border-radius: 24px;
+  background-color: var(--extra-accent-color);
+
+  font-family: "Inter";
+  font-weight: 500;
+}
+
+.review-card-text {
+  margin-bottom: 42px;
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.review-tag-wrap {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.review-user-name {
+  font-size: 16px;
+  line-height: 19.4px;
+  color: var(--extra-text-color);
+}
+
+.review-navigation-wrapper {
+  position: relative;
+  margin-bottom: 36px;
+}
+
+.review-dots {
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+}
+
+.review-dot {
+  border: none;
+  width: 10px;
+  height: 10px;
+  background: var(--bg-light-grey-color);
+  border-radius: 50%;
+  margin: 0 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.review-dot:focus {
+  outline: none;
+}
+
+.review-dot.active {
+  background: var(--dot-accent-color);
+}
