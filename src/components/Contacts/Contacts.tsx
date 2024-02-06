@@ -1,5 +1,6 @@
 import Envelope from "../../svgComponents/Envelope";
 import Handset from "../../svgComponents/Handset";
+import { ContactForm } from "../ContactForm/ContactForm";
 import "./Contacts.css";
 
 function Contacts() {
@@ -29,6 +30,7 @@ function Contacts() {
           confettibalony@gmail.com
         </a>
       </div>
+      <ContactForm />
     </section>
   );
 }

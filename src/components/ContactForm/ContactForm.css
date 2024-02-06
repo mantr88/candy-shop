@@ -1,0 +1,76 @@
+.contact-form {
+  /* width: 100vh;
+  padding-left: 20px;
+  padding-right: 20px;*/
+  background-color: var(--extra-accent-color);
+}
+
+.contact-form-wrap {
+  min-width: 320px;
+  margin-top: 36px;
+  margin-bottom: 51px;
+
+  display: flex;
+  gap: 28px;
+  flex-direction: column;
+  color: var(--form-text-color);
+}
+
+.contact-form-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 8px;
+  line-height: 19.4px;
+}
+
+.contact-form-text {
+  margin-left: 24px;
+}
+.contact-form-input {
+  width: 100%;
+  border: 1px solid var(--input-border-color);
+  border-radius: 9px;
+  padding: 20px 24px;
+
+  font-size: 20px;
+  line-height: 24.2px;
+  color: var(--main-color);
+
+  &::placeholder {
+    font-size: 18px;
+    line-height: 21.8px;
+    color: var(--placeholder-text-color);
+  }
+}
+
+.contact-form-input.error::placeholder,
+.contact-form-input.error {
+  color: var(--accent-color);
+}
+
+.contact-form-error {
+  margin-left: auto;
+  margin-right: 24px;
+  color: var(--accent-color);
+  font-size: 14px;
+  line-height: 16.9px;
+}
+
+.contact-form-btn-wrap {
+}
+.contact-form-btn {
+  width: 320px;
+  padding: 20px 32px;
+  border-radius: 24px;
+
+  font-family: "Anzeigen Grotesk T";
+  font-size: 28px;
+  line-height: 29px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--white-text-color);
+  background: var(--accent-color);
+}
