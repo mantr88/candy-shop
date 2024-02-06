@@ -1,3 +1,4 @@
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import "./MainLoyout.css";
 
@@ -11,6 +12,7 @@ function MainLoyout({ children }: LoyoutProps) {
       <div className="overlay"></div>
       <Header />
       <main>{children}</main>
+      <Footer />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 .contacts {
+  margin-bottom: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,5 +34,13 @@
 
   &:first-of-type {
     margin-bottom: 16px;
+  }
+
+  &:hover {
+    color: var(--accent-color);
+
+    path {
+      stroke: var(--accent-color);
+    }
   }
 }

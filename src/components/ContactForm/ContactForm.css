@@ -73,4 +73,8 @@
 
   color: var(--white-text-color);
   background: var(--accent-color);
+
+  &:hover {
+    background-color: rgba(237, 75, 94, 0.75);
+  }
 }
