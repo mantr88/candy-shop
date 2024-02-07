@@ -1,0 +1,13 @@
+.bgmenu-container {
+  height: 100%;
+  background: var(--bg-color);
+}
+.bgmenu-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: start;
+  color: var(--main-color);
+  letter-spacing: -0.64px;
+  transition: color 0.4s;
+}

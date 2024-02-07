@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import Logo from "../../svgComponents/Logo";
-import Menu from "../../svgComponents/Menu";
+import Logo from "../../ui/svgComponents/Logo";
+import Menu from "../../ui/svgComponents/Menu";
 import "./Header.css";
+import PopupWindow from "../../ui/PopWindow/PopWindow";
+import { BurgerMenu } from "../../components/BurgerMenu/BurgerMenu";
 
 function Header() {
   const [scrolling, setScrolling] = useState(false);
-  console.log("🪲 ~ Header ~ scrolling:", scrolling);
+  const [active, setActive] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -22,6 +24,12 @@ function Header() {
     }
   };
 
+  const onClose = () => {
+    console.log("onClose");
+    document.body.style.overflow = "visible";
+    setActive(false);
+  };
+
   const textMenuCls = !scrolling
     ? "header-menu-text"
     : "header-menu-text hidden-text";
@@ -34,9 +42,20 @@ function Header() {
         <Logo />
       </div>
 
-      <div className="header-menu-wrap">
+      <div
+        className="header-menu-wrap"
+        onClick={() => {
+          setActive(true);
+          console.log("click", active);
+        }}
+      >
         <span className={textMenuCls}>MENU</span> <Menu />
       </div>
+      {active && (
+        <PopupWindow setActive={setActive} active={active}>
+          <BurgerMenu closeModal={onClose} />
+        </PopupWindow>
+      )}
     </header>
   );
 }
