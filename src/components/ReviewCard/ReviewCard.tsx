@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "./ReviewCard.css";
-import TagUser from "../../svgComponents/TagUser";
+import TagUser from "../../ui/svgComponents/TagUser";
 
 function ReviewCard() {
   const [currentSlide, setCurrentSlide] = useState(0);

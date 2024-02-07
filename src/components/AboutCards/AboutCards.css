@@ -11,6 +11,7 @@
   font-weight: 500;
   height: 253px;
   border-radius: 24px;
+  z-index: -1;
 }
 
 .about-card-title {

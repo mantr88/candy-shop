@@ -3,7 +3,7 @@ import "./Review.css";
 
 function Review() {
   return (
-    <section className="section">
+    <section className="section" id="review-section">
       <h2 className="section-title review-section-title">Recenzje</h2>
       <ReviewCard />
     </section>

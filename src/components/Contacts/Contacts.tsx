@@ -1,11 +1,11 @@
-import Envelope from "../../svgComponents/Envelope";
-import Handset from "../../svgComponents/Handset";
+import Envelope from "../../ui/svgComponents/Envelope";
+import Handset from "../../ui/svgComponents/Handset";
 import { ContactForm } from "../ContactForm/ContactForm";
 import "./Contacts.css";
 
 function Contacts() {
   return (
-    <section className="section contacts">
+    <section className="section contacts" id="contact-section">
       <h2 className="section-title contacts-title">Kontakty</h2>
       <p className="contacts-company-name">
         Confetti - Studio <br /> Dekoracij Balonami <br />

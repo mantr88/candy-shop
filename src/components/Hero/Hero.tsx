@@ -2,7 +2,7 @@ import "./Hero.css";
 
 function Hero() {
   return (
-    <section className="hero-section">
+    <section className="hero-section" id="hero-section">
       <img
         className="hero-top-img"
         src="./public/image/top-balloons-floating-air.png"
