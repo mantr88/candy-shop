@@ -7,20 +7,22 @@
 
   border: 2px solid tomato;
 
-  @media only screen and (min-width: var(--s)) {
-    width: 480px;
+  @media screen and (min-width: 480px) {
+    width: var(--s);
   }
 
-  @media screen and (min-width: var(--m)) {
-    width: 768px;
-    padding-left: 86px;
-    padding-right: 86px;
+  @media screen and (min-width: 768px) {
+    width: var(--m);
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 2px solid green;
   }
 
-  @media screen and (min-width: var(--l)) {
+  @media screen and (min-width: 1280px) {
     width: 1280px;
     padding-left: 112px;
     padding-right: 112px;
+    border: 2px solid violet;
   }
 }
 
@@ -35,6 +37,11 @@
   height: 713px;
 
   background-color: var(--extra-accent-color);
-  background-image: url("../../../public/image/Group_14.png");
+  background-image: url("../../../public/image/bg_image.png");
   background-size: cover;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    height: 698px;
+  }
 }

@@ -11,7 +11,8 @@ function Hero() {
       />
       <h2 className="hero-title">
         Tworzymy unikalne
-        <br />i niepowtarzalne{" "}
+        <br />i niepowtarzalne
+        <br />
         <span className="hero-accent-text">dekoracje balonowe</span>
         <br />
         na imprezy

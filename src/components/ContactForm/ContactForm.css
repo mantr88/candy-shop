@@ -45,6 +45,11 @@
   }
 }
 
+.contact-form-input:focus-visible {
+  border: none;
+  border: 1px solid var(--main-color);
+}
+
 .contact-form-input.error::placeholder,
 .contact-form-input.error {
   color: var(--accent-color);

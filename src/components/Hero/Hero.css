@@ -7,11 +7,24 @@
   top: 70px;
   right: 203px;
   z-index: -1;
+
+  @media screen and (min-width: 768px) {
+    width: 343px;
+    height: 348px;
+    top: 149px;
+    right: 536px;
+  }
+
+  animation-name: ballsRotate;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .hero-title {
   padding-top: 150px;
-  padding-bottom: 254px;
+  padding-bottom: 234px;
   margin-bottom: 76px;
 
   font-family: "Anzeigen Grotesk T";
@@ -20,6 +33,13 @@
   line-height: 42px;
   text-transform: uppercase;
   color: var(--accent-color);
+
+  @media screen and (min-width: 768px) {
+    padding-top: 183px;
+    padding-bottom: 247px;
+    font-size: 64px;
+    line-height: 67.14px;
+  }
 }
 
 .hero-accent-text {
@@ -31,4 +51,47 @@
   top: 360px;
   left: 210px;
   z-index: -1;
+
+  @media screen and (min-width: 768px) {
+    width: 346px;
+    height: 340px;
+    top: 385px;
+    left: 474px;
+  }
+
+  animation-name: ballsRotate;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes ballsRotate {
+  0% {
+    transform: rotate(-5deg);
+  }
+  12% {
+    transform: rotate(-10deg);
+  }
+  24% {
+    transform: rotate(-15deg);
+  }
+  36% {
+    transform: rotate(-10deg);
+  }
+  48% {
+    transform: rotate(-5deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  72% {
+    transform: rotate(5deg);
+  }
+  84% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
 }
