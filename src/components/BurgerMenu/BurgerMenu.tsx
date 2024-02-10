@@ -33,6 +33,7 @@ export function BurgerMenu({ closeModal }: Props) {
             <p>główna</p>
           </li>
           <li
+            className="nav-item"
             onClick={() => {
               closeModal();
               scrolledTo("about-section");
@@ -42,6 +43,7 @@ export function BurgerMenu({ closeModal }: Props) {
             <p>O nas</p>
           </li>
           <li
+            className="nav-item"
             onClick={() => {
               closeModal();
               scrolledTo("review-section");
@@ -51,6 +53,7 @@ export function BurgerMenu({ closeModal }: Props) {
             <p>Recenzje</p>
           </li>
           <li
+            className="nav-item"
             onClick={() => {
               closeModal();
               scrolledTo("contact-section");

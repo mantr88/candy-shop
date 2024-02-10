@@ -12,6 +12,10 @@
   transition: color 0.4s;
 }
 
+.close-squere:hover path {
+  stroke: var(--accent-color);
+}
+
 .nav-list {
   margin-top: 62px;
 
@@ -25,4 +29,8 @@
   & > li {
     margin-bottom: 24px;
   }
+}
+
+.nav-item:hover {
+  color: var(--accent-color);
 }
