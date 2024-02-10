@@ -4,8 +4,8 @@
 
 .hero-top-img {
   position: absolute;
-  top: 70px;
-  right: 203px;
+  top: 65px;
+  right: 213px;
   z-index: -1;
 
   @media screen and (min-width: 768px) {
@@ -23,14 +23,13 @@
 }
 
 .hero-title {
-  padding-top: 150px;
-  padding-bottom: 234px;
-  margin-bottom: 76px;
+  margin-top: 212px;
+  margin-bottom: 234px;
 
   font-family: "Anzeigen Grotesk T";
   font-size: 40px;
   font-weight: 500;
-  line-height: 42px;
+  line-height: 0.8;
   text-transform: uppercase;
   color: var(--accent-color);
 
@@ -48,8 +47,8 @@
 
 .hero-bottom-img {
   position: absolute;
-  top: 360px;
-  left: 210px;
+  top: 265px;
+  left: 190px;
   z-index: -1;
 
   @media screen and (min-width: 768px) {

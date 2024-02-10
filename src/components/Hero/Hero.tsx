@@ -6,8 +6,8 @@ function Hero() {
       <img
         className="hero-top-img"
         src="./public/image/top-balloons-floating-air.png"
-        width="155"
-        height="157"
+        width="205"
+        height="207"
       />
       <h2 className="hero-title">
         Tworzymy unikalne
@@ -20,8 +20,8 @@ function Hero() {
       <img
         className="hero-bottom-img"
         src="./public/image/bottom-balloons-floating-air.png"
-        width="155"
-        height="157"
+        width="227"
+        height="230"
       />
     </section>
   );
