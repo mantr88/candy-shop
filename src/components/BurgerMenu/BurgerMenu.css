@@ -4,10 +4,25 @@
 }
 .bgmenu-wrap {
   position: relative;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: space-between;
   color: var(--main-color);
   letter-spacing: -0.64px;
   transition: color 0.4s;
+}
+
+.nav-list {
+  margin-top: 62px;
+
+  font-family: "Anzeigen Grotesk T";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: center;
+  text-transform: uppercase;
+
+  & > li {
+    margin-bottom: 24px;
+  }
 }

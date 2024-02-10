@@ -1,5 +1,6 @@
 import { scrolledTo } from "../../helpers/scrolledTo";
 import CloseSquare from "../../ui/svgComponents/CloseSquare";
+import Logo from "../../ui/svgComponents/Logo";
 import "./BurgerMenu.css";
 
 type Props = {
@@ -16,11 +17,13 @@ export function BurgerMenu({ closeModal }: Props) {
           console.log("onClose");
         }}
       >
+        <Logo />
         <CloseSquare />
       </div>
       <nav>
-        <ul>
+        <ul className="nav-list">
           <li
+            className="nav-item"
             onClick={() => {
               closeModal();
               scrolledTo("hero-section");

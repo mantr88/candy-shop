@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { Props, QuerySelector } from "./PopWindow.types";
+import "./PopWindow.css";
 
 const PopupWindow = ({ active, setActive, children }: Props) => {
   useEffect(() => {
@@ -20,27 +21,21 @@ const PopupWindow = ({ active, setActive, children }: Props) => {
   document.addEventListener("keydown", closePopupByEsc);
 
   return createPortal(
-    //   return (
-    //     <>
     <div
-      className="overlay"
+      className="popup-overlay"
       onClick={() => {
         setActive(false);
       }}
     >
-      <div>
-        <div
-          className="content"
-          onClick={(e) => {
-            e.stopPropagation();
-          }}
-        >
-          {children}
-        </div>
+      <div
+        className="popup-content"
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      >
+        {children}
       </div>
     </div>,
-    //     </>
-    //   );
     document.querySelector("#popup-root") as QuerySelector
   );
 };

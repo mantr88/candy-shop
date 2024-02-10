@@ -41,7 +41,6 @@ function Header() {
       <div className={LogoCls}>
         <Logo />
       </div>
-
       <div
         className="header-menu-wrap"
         onClick={() => {
