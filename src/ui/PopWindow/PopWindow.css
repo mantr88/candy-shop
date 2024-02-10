@@ -1,36 +1,14 @@
 .popup-overlay {
+  width: 100%;
+  height: 100vh;
+  background: white;
   position: fixed;
   top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 495px;
-  width: 100%;
-
-  background: var(--bg-color);
-  /* border: 2px solid violet; */
-
-  backdrop-filter: blur(2px);
+  z-index: 4;
 }
 .popup-content {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 320px;
-  padding: 30px 0px;
-  background-color: var(--bg-color);
-
-  /* border: 1px solid green; */
-
-  /* @media screen and (min-width: ${props => props.theme.breakpoints.s}) {
-    left: auto;
-    right: 30px;
-    transform: translateX(0);
-  }
-
-  @media screen and (min-width: ${props => props.theme.breakpoints.l}) {
-    right: 20px;
-  } */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

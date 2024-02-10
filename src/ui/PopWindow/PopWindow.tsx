@@ -28,7 +28,7 @@ const PopupWindow = ({ active, setActive, children }: Props) => {
       }}
     >
       <div
-        className="popup-content"
+        className="popup-content container"
         onClick={(e) => {
           e.stopPropagation();
         }}
