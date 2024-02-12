@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
@@ -7,6 +7,7 @@ import "./AboutCards.css";
 function AboutCards() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     initial: 0,
     slideChanged(slider) {
@@ -16,13 +17,27 @@ function AboutCards() {
       setLoaded(true);
     },
     loop: true,
+    breakpoints: {
+      "(min-width: 768px)": {
+        disabled: true,
+      },
+    },
   });
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const needASlider = isMobile;
+  console.log("needASlider: ", needASlider);
 
   return (
     <>
       <div className="about-navigation-wrapper">
-        <div ref={sliderRef} className="keen-slider">
-          <div className="keen-slider__slide about-number-slide1">
+        <div ref={sliderRef} className="keen-slider grid">
+          <div className="keen-slider__slide about-number-slide1 about-number-slide1">
             <p className="about-card-title">
               Kreatywne podejście i <br />
               dbałość o szczegóły
@@ -32,7 +47,7 @@ function AboutCards() {
               dekoracji balonowych, z dbałością o szczegóły
             </p>
           </div>
-          <div className="keen-slider__slide about-number-slide2">
+          <div className="keen-slider__slide about-number-slide1 about-number-slide2">
             <p className="about-card-title">
               Materiały przyjazne <br />
               dla środowiska
@@ -43,7 +58,7 @@ function AboutCards() {
               ślad na środowisku.
             </p>
           </div>
-          <div className="keen-slider__slide about-number-slide3">
+          <div className="keen-slider__slide about-number-slide1 about-number-slide3">
             <p className="about-card-title">
               Szeroka gama kolorów <br />
               do personalizacji
@@ -53,7 +68,7 @@ function AboutCards() {
               pozwala spersonalizować wystrój na każdą okazję.
             </p>
           </div>
-          <div className="keen-slider__slide about-number-slide4">
+          <div className="keen-slider__slide about-number-slide1 about-number-slide4">
             <p className="about-card-title">
               Gwarancja dostawy <br /> i montażu
             </p>
@@ -64,7 +79,7 @@ function AboutCards() {
           </div>
         </div>
       </div>
-      {loaded && instanceRef.current && (
+      {loaded && instanceRef.current && needASlider && (
         <div className="about-dots">
           {[
             ...Array(instanceRef.current.track.details.slides.length).keys(),

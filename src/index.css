@@ -128,10 +128,17 @@ img {
   font-family: "Anzeigen Grotesk T";
   font-weight: 500;
   font-size: 36px;
-  line-height: 39.6px;
+  line-height: 0.8;
   text-transform: uppercase;
 }
 
 .section {
   margin-top: 80px;
+}
+
+@media screen and (min-width: 748px) {
+  .section-title {
+    margin-bottom: 48px;
+    font-size: 48px;
+  }
 }

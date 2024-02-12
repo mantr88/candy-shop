@@ -75,3 +75,29 @@
 .about-dot.active {
   background: var(--dot-accent-color);
 }
+
+/* tablet view styles */
+
+@media screen and (min-width: 768px) {
+  .grid {
+    display: grid;
+    row-gap: 24px;
+  }
+
+  [class^="about-number-slide"],
+  [class*=" about-number-slide"] {
+    height: 287px;
+    padding: 48px;
+  }
+
+  .about-card-title {
+    margin-bottom: 40px;
+    font-size: 40px;
+    line-height: 0.8;
+  }
+  .about-card-text {
+    width: 500px;
+    font-size: 20px;
+    line-height: 1.45;
+  }
+}
