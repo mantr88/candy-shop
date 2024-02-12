@@ -64,3 +64,18 @@
 .review-dot.active {
   background: var(--dot-accent-color);
 }
+
+.review-btn-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.review-btn {
+  &:hover rect {
+    stroke: var(--bg-color);
+    fill: var(--accent-color);
+  }
+  &:hover path {
+    stroke: var(--bg-color);
+  }
+}

@@ -30,9 +30,6 @@ function AboutCards() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const needASlider = isMobile;
-  console.log("needASlider: ", needASlider);
-
   return (
     <>
       <div className="about-navigation-wrapper">
@@ -79,7 +76,7 @@ function AboutCards() {
           </div>
         </div>
       </div>
-      {loaded && instanceRef.current && needASlider && (
+      {loaded && instanceRef.current && isMobile && (
         <div className="about-dots">
           {[
             ...Array(instanceRef.current.track.details.slides.length).keys(),

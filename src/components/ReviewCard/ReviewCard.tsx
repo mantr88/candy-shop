@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "./ReviewCard.css";
 import TagUser from "../../ui/svgComponents/TagUser";
+import ArrowSliderLeft from "../../ui/svgComponents/ArrowSliderLeft";
+import ArrowSliderRight from "../../ui/svgComponents/ArrowSliderRight";
 
 function ReviewCard() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
-  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
     initial: 0,
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
@@ -16,7 +19,33 @@ function ReviewCard() {
       setLoaded(true);
     },
     loop: true,
+    breakpoints: {
+      "(min-width: 768px)": {
+        slides: {
+          perView: 2,
+          spacing: 16,
+        },
+      },
+    },
   });
+
+  const handlePrev = () => {
+    if (slider) {
+      slider.current?.prev();
+    }
+  };
+
+  const handleNext = () => {
+    if (slider) {
+      slider.current?.next();
+    }
+  };
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
@@ -54,23 +83,42 @@ function ReviewCard() {
           </div>
         </div>
       </div>
-      {loaded && instanceRef.current && (
+      {loaded && slider.current && isMobile && (
         <div className="review-dots">
-          {[
-            ...Array(instanceRef.current.track.details.slides.length).keys(),
-          ].map((idx) => {
-            return (
-              <button
-                key={idx}
-                onClick={() => {
-                  instanceRef.current?.moveToIdx(idx);
-                }}
-                className={
-                  "review-dot" + (currentSlide === idx ? " active" : "")
-                }
-              ></button>
-            );
-          })}
+          {[...Array(slider.current.track.details.slides.length).keys()].map(
+            (idx) => {
+              return (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    slider.current?.moveToIdx(idx);
+                  }}
+                  className={
+                    "review-dot" + (currentSlide === idx ? " active" : "")
+                  }
+                ></button>
+              );
+            }
+          )}
+        </div>
+      )}
+
+      {!isMobile && (
+        <div className="review-btn-wrap">
+          <button
+            className="review-btn"
+            onClick={handlePrev}
+            aria-label="Button to go to the previous slide"
+          >
+            <ArrowSliderLeft />
+          </button>
+          <button
+            className="review-btn"
+            onClick={handleNext}
+            aria-label="Button to go to the next slide"
+          >
+            <ArrowSliderRight />
+          </button>
         </div>
       )}
     </>
