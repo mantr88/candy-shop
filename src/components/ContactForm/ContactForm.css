@@ -3,6 +3,7 @@
   padding-left: 20px;
   padding-right: 20px;*/
   background-color: var(--extra-accent-color);
+  z-index: 3;
 }
 
 .contact-form-wrap {
@@ -63,8 +64,6 @@
   line-height: 16.9px;
 }
 
-.contact-form-btn-wrap {
-}
 .contact-form-btn {
   width: 320px;
   padding: 20px 32px;
@@ -81,5 +80,27 @@
 
   &:hover {
     background-color: rgba(237, 75, 94, 0.75);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact-form {
+    width: 608px;
+    border-radius: 24px;
+    padding: 57px 83px 56px 82px;
+  }
+
+  .contact-form-wrap {
+    margin: 0;
+
+    align-items: center;
+  }
+
+  .contact-form-input {
+    width: 443px;
+  }
+
+  .contact-form-btn {
+    width: 443px;
   }
 }

@@ -83,15 +83,13 @@ export function ContactForm() {
                 <ErrorMessage name="message" />
               </div>
             </label>
-            <div className="contact-form-btn-wrap">
-              <button
-                className="contact-form-btn"
-                type="submit"
-                aria-label="Button for submit form"
-              >
-                Wyślij
-              </button>
-            </div>
+            <button
+              className="contact-form-btn"
+              type="submit"
+              aria-label="Button for submit form"
+            >
+              Wyślij
+            </button>
           </div>
         </Form>
       )}

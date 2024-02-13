@@ -1,4 +1,5 @@
 .contacts {
+  position: relative;
   margin-bottom: 80px;
   display: flex;
   flex-direction: column;
@@ -16,7 +17,7 @@
   font-family: "Anzeigen Grotesk T";
   font-weight: 500;
   font-size: 28px;
-  line-height: 29.4px;
+  line-height: 1.05;
 }
 .contacts-link-wrap {
   margin-bottom: 36px;
@@ -30,6 +31,7 @@
 .contacts-link {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
 
   &:first-of-type {
@@ -41,6 +43,54 @@
 
     path {
       stroke: var(--accent-color);
+    }
+  }
+}
+
+.contacts-top-img,
+.contacts-bottom-img {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .contacts-title {
+    margin-bottom: 24px;
+  }
+
+  .contacts-company-name {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .contacts-link-wrap {
+    margin-bottom: 88px;
+    font-size: 24px;
+    line-height: 1.21;
+  }
+
+  @media screen and (min-width: 768px) {
+    .contacts-top-img {
+      display: block;
+      position: absolute;
+      top: 172px;
+      left: -180px;
+
+      animation-name: ballsRotate;
+      animation-duration: 30s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+    .contacts-bottom-img {
+      display: block;
+      position: absolute;
+      top: 370px;
+      left: 213px;
+
+      animation-name: ballsRotate;
+      animation-duration: 30s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
     }
   }
 }

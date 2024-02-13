@@ -30,7 +30,19 @@ function Contacts() {
           confettibalony@gmail.com
         </a>
       </div>
+      <img
+        className="contacts-top-img"
+        src="./public/image/top-balloons-floating-air.png"
+        width="612"
+        height="620"
+      />
       <ContactForm />
+      <img
+        className="contacts-bottom-img"
+        src="./public/image/bottom-balloons-floating-air.png"
+        width="644"
+        height="650"
+      />
     </section>
   );
 }
