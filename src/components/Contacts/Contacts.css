@@ -9,6 +9,7 @@
 }
 
 .contacts-title {
+  margin-bottom: 36px;
   color: var(--accent-color);
 }
 
@@ -68,6 +69,10 @@
   }
 
   @media screen and (min-width: 768px) {
+    .contacts-title {
+      margin-bottom: 24px;
+    }
+
     .contacts-top-img {
       display: block;
       position: absolute;

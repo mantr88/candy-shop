@@ -12,8 +12,8 @@ function TagUser() {
         stroke="#ED4B5E"
         strokeWidth="1.5"
         strokeMiterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M12.0699 8.95C12.0299 8.95 11.9699 8.95 11.9199 8.95C10.8699 8.91 10.0399 8.06 10.0399 7C10.0399 5.92 10.9099 5.05 11.9899 5.05C13.0699 5.05 13.9399 5.93 13.9399 7C13.9499 8.06 13.1199 8.92 12.0699 8.95Z"

@@ -1,23 +1,28 @@
 .contact-form {
-  /* width: 100vh;
-  padding-left: 20px;
-  padding-right: 20px;*/
+  width: 100vw;
   background-color: var(--extra-accent-color);
-  z-index: 3;
+  z-index: 2;
 }
 
 .contact-form-wrap {
   min-width: 320px;
+  max-width: 480px;
   margin-top: 36px;
   margin-bottom: 51px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
 
   display: flex;
+  justify-content: center;
   gap: 28px;
   flex-direction: column;
   color: var(--form-text-color);
 }
 
 .contact-form-label {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,6 +73,7 @@
   width: 320px;
   padding: 20px 32px;
   border-radius: 24px;
+  margin: 0 auto;
 
   font-family: "Anzeigen Grotesk T";
   font-size: 28px;
