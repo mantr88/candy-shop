@@ -5,7 +5,7 @@ function Hero() {
     <section className="hero-section" id="hero-section">
       <img
         className="hero-top-img"
-        src="./public/image/top-balloons-floating-air.png"
+        src="./image/top-balloons-floating-air.png"
         width="205"
         height="207"
       />
@@ -19,7 +19,7 @@ function Hero() {
       </h2>
       <img
         className="hero-bottom-img"
-        src="./public/image/bottom-balloons-floating-air.png"
+        src="./image/bottom-balloons-floating-air.png"
         width="227"
         height="230"
       />
