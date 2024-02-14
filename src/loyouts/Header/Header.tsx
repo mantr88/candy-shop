@@ -44,7 +44,6 @@ function Header() {
         className="header-menu-wrap"
         onClick={() => {
           setActive(true);
-          console.log("click", active);
         }}
       >
         <span className={textMenuCls}>MENU</span> <Menu />

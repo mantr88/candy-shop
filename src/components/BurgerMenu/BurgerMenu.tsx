@@ -14,7 +14,6 @@ export function BurgerMenu({ closeModal }: Props) {
         className="bgmenu-wrap"
         onClick={() => {
           closeModal();
-          console.log("onClose");
         }}
       >
         <Logo />

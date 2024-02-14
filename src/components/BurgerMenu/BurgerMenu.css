@@ -22,20 +22,41 @@
 
   font-family: "Anzeigen Grotesk T";
   font-size: 24px;
-  line-height: 25px;
   text-align: center;
   text-transform: uppercase;
+  line-height: 0.8;
 
   & > li {
     margin-bottom: 24px;
-  }
-
-  @media screen and (min-width: 768px) {
-    font-size: 40px;
-    line-height: 42px;
   }
 }
 
 .nav-item:hover {
   color: var(--accent-color);
+}
+
+/* responsive */
+
+@media screen and (min-width: 768px) {
+  .nav-list {
+    font-size: 40px;
+
+    & > li {
+      margin-bottom: 36px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .bgmenu-container {
+    padding-top: 37px;
+  }
+
+  .nav-list {
+    font-size: 64px;
+
+    & > li {
+      margin-bottom: 48px;
+    }
+  }
 }
