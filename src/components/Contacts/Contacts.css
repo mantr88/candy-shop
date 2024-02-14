@@ -68,6 +68,8 @@
     line-height: 1.21;
   }
 
+  /* responsive */
+
   @media screen and (min-width: 768px) {
     .contacts-title {
       margin-bottom: 24px;
@@ -76,8 +78,12 @@
     .contacts-top-img {
       display: block;
       position: absolute;
-      top: 172px;
-      left: -180px;
+      top: 222px;
+      right: 375px;
+      width: 412px;
+      height: 420px;
+      transform: rotate(320deg);
+      z-index: -1;
 
       animation-name: ballsRotate;
       animation-duration: 30s;
@@ -88,8 +94,12 @@
     .contacts-bottom-img {
       display: block;
       position: absolute;
-      top: 370px;
-      left: 213px;
+      width: 344px;
+      height: 350px;
+      top: 494px;
+      left: 430px;
+      transform: rotate(4deg);
+      z-index: -1;
 
       animation-name: ballsRotate;
       animation-duration: 30s;
@@ -97,5 +107,56 @@
       animation-iteration-count: infinite;
       animation-direction: alternate;
     }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .contacts {
+    flex-direction: row;
+    gap: 240px;
+    justify-content: space-between;
+  }
+
+  #contact-section {
+    margin-top: 200px;
+  }
+
+  div > .contacts-title {
+    margin-bottom: 56px;
+    font-size: 100px;
+    text-align: start;
+  }
+
+  .contacts-company-name {
+    margin-bottom: 32px;
+    font-size: 40px;
+    line-height: 0.8;
+    text-align: start;
+  }
+  .contacts-link-wrap {
+    margin-bottom: 0;
+  }
+
+  .contacts-link {
+    justify-content: start;
+  }
+
+  .contacts-formBlock-wrap {
+    position: relative;
+  }
+
+  .contacts-top-img {
+    top: -125px;
+    left: -160px;
+    width: 460px;
+    height: 469px;
+  }
+
+  .contacts-bottom-img {
+    width: 384px;
+    height: 391px;
+    top: 130px;
+    left: 343px;
+    transform: rotate(351deg);
   }
 }

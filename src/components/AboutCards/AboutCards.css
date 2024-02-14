@@ -101,3 +101,20 @@
     line-height: 1.45;
   }
 }
+
+/* desktop view styles */
+
+@media screen and (min-width: 1280px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 24px;
+    column-gap: 24px;
+  }
+
+  [class^="about-number-slide"],
+  [class*=" about-number-slide"] {
+    height: 293px;
+  }
+}

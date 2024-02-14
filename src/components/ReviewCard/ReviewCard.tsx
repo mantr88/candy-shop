@@ -10,6 +10,7 @@ function ReviewCard() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1280);
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
     initial: 0,
     slideChanged(slider) {
@@ -24,6 +25,12 @@ function ReviewCard() {
         slides: {
           perView: 2,
           spacing: 16,
+        },
+      },
+      "(min-width: 1280px)": {
+        slides: {
+          perView: 3,
+          spacing: 26,
         },
       },
     },
@@ -42,7 +49,10 @@ function ReviewCard() {
   };
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+      setIsDesktop(window.innerWidth > 1280);
+    };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -103,7 +113,7 @@ function ReviewCard() {
         </div>
       )}
 
-      {!isMobile && (
+      {!isMobile && !isDesktop && (
         <div className="review-btn-wrap">
           <button
             className="review-btn"

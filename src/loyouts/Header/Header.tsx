@@ -25,7 +25,6 @@ function Header() {
   };
 
   const onClose = () => {
-    console.log("onClose");
     document.body.style.overflow = "visible";
     setActive(false);
   };

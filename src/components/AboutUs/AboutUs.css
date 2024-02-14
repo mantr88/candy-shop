@@ -8,7 +8,7 @@
   font-family: "Inter";
   font-weight: 500;
   font-size: 20px;
-  line-height: 28px;
+  line-height: 1.4;
   color: var(--extra-text-color);
 }
 
@@ -17,5 +17,15 @@
     width: 498px;
     margin: 0 auto 48px auto;
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about-text {
+    width: 700px;
+    margin: 0 auto 64px auto;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.2;
   }
 }
