@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>Confetti</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,5 +34,16 @@
     <div id="root"></div>
     <div id="popup-root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      const initialTitle = document.title;
+
+      window.onblur = () => {
+        document.title = "Please, come back";
+
+        window.onfocus = () => {
+          document.title = initialTitle;
+        };
+      };
+    </script>
   </body>
 </html>

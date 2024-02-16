@@ -1,8 +1,10 @@
-import AboutUs from "./components/AboutUs/AboutUs";
-import Contacts from "./components/Contacts/Contacts";
-import Hero from "./components/Hero/Hero";
-import Review from "./components/Review/Review";
-import MainLoyout from "./loyouts/MainLoyout/MainLoyout";
+import { lazy } from "react";
+
+const Hero = lazy(() => import("./components/Hero/Hero"));
+const AboutUs = lazy(() => import("./components/AboutUs/AboutUs"));
+const Review = lazy(() => import("./components/Review/Review"));
+const Contacts = lazy(() => import("./components/Contacts/Contacts"));
+const MainLoyout = lazy(() => import("./loyouts/MainLoyout/MainLoyout"));
 
 function App() {
   return (
