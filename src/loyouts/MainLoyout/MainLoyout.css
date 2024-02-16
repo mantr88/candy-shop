@@ -6,8 +6,6 @@
   padding-right: 20px;
   overflow: hidden;
 
-  border: 2px solid tomato;
-
   @media screen and (min-width: 480px) {
     width: var(--s);
   }
@@ -16,14 +14,12 @@
     width: var(--m);
     padding-left: 30px;
     padding-right: 30px;
-    border: 2px solid green;
   }
 
   @media screen and (min-width: 1280px) {
     width: 1280px;
     padding-left: 32px;
     padding-right: 32px;
-    border: 2px solid violet;
   }
 }
 
@@ -39,7 +35,6 @@
 
   background-image: url("../../../public/image/bg_image.png");
   background-size: cover;
-
   @media screen and (min-width: 768px) {
     max-width: 768px;
     height: 778px;

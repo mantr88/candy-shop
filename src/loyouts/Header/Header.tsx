@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import Logo from "../../ui/svgComponents/Logo";
 import Menu from "../../ui/svgComponents/Menu";
-import "./Header.css";
 import PopupWindow from "../../ui/PopWindow/PopWindow";
 import { BurgerMenu } from "../../components/BurgerMenu/BurgerMenu";
+import "./Header.css";
 
 function Header() {
   const [scrolling, setScrolling] = useState(false);

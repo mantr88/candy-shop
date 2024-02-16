@@ -48,6 +48,11 @@
   }
 }
 
+.contacts-formBlock-wrap {
+  background: var(--extra-accent-color);
+  border-radius: 24px;
+}
+
 .contacts-top-img,
 .contacts-bottom-img {
   display: none;
