@@ -1,30 +1,50 @@
-# React + TypeScript + Vite
+# Lending site of company from sales of inflatable balls
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is lending site of company from sales of inflatable balls. Features and functionality of this site:
 
-Currently, two official plugins are available:
+1. Header
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Fixed. Contains logo, burger menu.
+- When scrolling, the logo and menu name disappear, only the burger menu icon remains (see ui-kit). When the user returns to the Hero section in the first position, the logo and menu name appear again.
 
-## Expanding the ESLint configuration
+2. Burger menu
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Contains close button, navigation menu.
+- Each menu item is clickable, when you click on it, a smooth scroll will occur to the corresponding section on the page.
 
-- Configure the top-level `parserOptions` property like this:
+3. Hero (Główna)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- There is a simple animation of balls.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+4. About Us (O nas)
+
+- CSS Grid was used when laying out the cards.
+- On the mobile there is a slider. You can change the slide by clicking on the appropriate pagination or by dragging.
+
+5. Reviews (Recenzje)
+
+- You can change the slide by clicking on the appropriate buttons or by dragging.
+- When you click on the button, one slide will be clicked.
+
+6. Contacts
+
+- The form is valid. The Imię, E-mail form fields are mandatory, the Wiadomość field is optional.
+
+  ![Image hero section of site of company from sales of inflatable balls](<Знімок екрана 2024-02-16 о 10.58.49.png>)
+  ![Image about section of site of company from sales of inflatable balls](<Знімок екрана 2024-02-16 о 11.00.21.png>)
+
+The website complies with the following requirements:
+
+- The layout is fixed in рх;
+- The layout is semantic and valid;
+- Layout is adaptive and cross-browser - mobile from 360px to 480px (rubber layout), tablet - 768px, desktop - 1280px;
+- The code is divided into separate components.
+
+During the creation of this project, the following technologies were used:
+
+- <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="JavaScript" />
+    JavaScript
+- <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" width="36" height="36" alt="TypeScript" />
+    TypeScript
+- <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /> React.js,
+- <img src="https://www.kindacode.com/wp-content/uploads/2021/01/formik-300x259.png" width="36" height="36" alt="formik"/> Formik
